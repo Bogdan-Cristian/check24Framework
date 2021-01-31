@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .post{
+            background-color:#c6c6fd;
+            margin-bottom: 50px;
+            padding: 7px 20px;
+        }
+        .error-message{
+            color:red;
+        }
+        .redirect_button{
+            padding: 17px 20px;
+            background:black;
+            color:white;
+            display: block;
+            width:auto;
+        }
+    </style>
+</head>
+<body>
+
+{% if error %}
+    <p class="error-message">Something wen wrong try again</p>
+{% endif %}
+<form action="/login" method="POST">
+
+    <div class="input-group">
+        <label for="username">Username:</label>
+        <input type="text" name="username">
+    </div>
+    <div class="input-group">
+        <label for="password">Pass:</label>
+        <input type="text" name="password">
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+{% if redirect_button %}
+    <div>
+    <a href="/" class="redirect_button">Back to page</a>
+    </div>
+{% endif %}
+
+</body>
+</html>

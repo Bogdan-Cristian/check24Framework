@@ -1,0 +1,20 @@
+{
+    "name": "bogdan/bogdan_test",
+    "authors": [
+        {
+            "name": "Bogdan",
+            "email": "bogdanciumac200@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/http-foundation": "^5.2",
+        "twig/twig": "^3.0",
+        "symfony/routing": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\" : "src/",
+            "Service\\" : "src/Services/"
+        }
+    }
+}
